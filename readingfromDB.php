@@ -8,10 +8,11 @@ or die(mysql_error());
 
 while($row = mysql_fetch_assoc($data))
 {
-   $latitude=$row["latitude"];
-   $longitude=$row["longitude"];
-print $latitude;
-print $longitude;
+   $latitude[]=$row["latitude"];
+   $longitude[]=$row["longitude"];
 }
+print_r($latitude);
+print " ";
+print_r($longitude);
 ?>
 
