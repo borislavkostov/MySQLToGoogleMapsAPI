@@ -29,14 +29,26 @@ var map;
         });
 var latitude=new Array();
 var longitude=new Array();
+var start_date=new Array();
+var title=new Array();
+var title=<?php echo json_encode($title); ?>;
+var start_date=<?php echo json_encode($start_time); ?>;
 var latitude =<?php echo json_encode($latitude); ?>;
 var longitude = <?php echo json_encode($longitude); ?>;
 for(i=0;i<latitude.length;i++)
 {
+var content="Date:"+start_date[i]+"</br>Title:"+title[i];
+var infowindow = new google.maps.InfoWindow({});
 var marker = new google.maps.Marker({
     position: {lat:parseFloat(latitude[i]),lng:parseFloat(longitude[i])},
-    map: map
+    map: map,
   });
+google.maps.event.addListener(marker,'click', (function(marker,content,infowindow){ 
+    return function() {
+        infowindow.setContent(content);
+        infowindow.open(map,marker);
+    };
+})(marker,content,infowindow));
 }
       }
 
