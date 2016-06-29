@@ -10,9 +10,8 @@ while($row = mysql_fetch_assoc($data))
 {
    $latitude[]=$row["latitude"];
    $longitude[]=$row["longitude"];
+   $title[]=$row["title"];
+   $start_time[]=$row["start_time"];
 }
-print_r($latitude);
-print " ";
-print_r($longitude);
 ?>
 
