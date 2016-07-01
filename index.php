@@ -62,7 +62,7 @@ google.maps.event.addListener(marker,'click', (function(marker,content,infowindo
       }
 
 </script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAymgz0AXCj6ipuLijePEpi72_QcUga23Q&callback=initMap"
+<script src="https://maps.googleapis.com/maps/api/js?key=API_KEY&callback=initMap"
     async defer> </script>
 
 
