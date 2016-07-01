@@ -18,6 +18,15 @@ html, body {
   </head>
   <body>
 <?php include 'readingfromDB.php';?>
+<form action="index.php" method="post" >
+  <input type="text" name="searchByCountry" placeholder="Search for country">
+  <input type="text" name="searchByRegion" placeholder="Search for region ">
+  <input type="text" name="searchByCity" placeholder="Search for city">
+  <input type="text" name="searchByStart" placeholder="Search by start">
+  <input type="text" name="searchByEnd" placeholder="Search by end">
+  <input type="submit" value="Search"">
+</form>
+
     <div id="map"></div>
 <script>
 var map;
